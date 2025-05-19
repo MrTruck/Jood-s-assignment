@@ -7,8 +7,8 @@ public class PaypalPayment extends PaymentProcess{
     @Override
     void validatePayment() {
 
-        if(accountExist){
-            System.out.println("account found");
+        if(!accountExist){
+            System.out.println("account not found");
             return;
         }
         if (paypalBalance < amountToPay) {
