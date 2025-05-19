@@ -8,8 +8,8 @@ public class CreditCardPayment extends PaymentProcess {
 
     @Override
     void validatePayment() {
-        if(cardIsValid){
-               System.out.println("eligible for payment");
+        if(!cardIsValid){
+               System.out.println("ineligible for payment");
                return;
         }
         if (balance < amountToPay) {
